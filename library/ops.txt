@@ -1,0 +1,82 @@
+    // the assigment operator.
+    FWave1D<T,TimeType> operator + (const FWave1D<T,TimeType>& A) const;
+    FWave1D<T,TimeType> operator - (const FWave1D<T,TimeType>& A) const;
+    FWave1D<T,TimeType> operator * (const FWave1D<T,TimeType>& A) const;
+    FWave1D<T,TimeType> operator / (const FWave1D<T,TimeType>& A) const;
+    FWave1D<T,TimeType>& operator += (const FWave1D<T,TimeType>& A);
+    FWave1D<T,TimeType>& operator -= (const FWave1D<T,TimeType>& A);
+    FWave1D<T,TimeType>& operator *= (const FWave1D<T,TimeType>& A);
+    FWave1D<T,TimeType>& operator /= (const FWave1D<T,TimeType>& A);
+    inline FWave1D<T,TimeType>& operator = (const FWave1D<T,TimeType>& A);
+    FWave1D<T,TimeType> operator = (const TWave1D<T,TimeType>& y);
+    // friends for all our non-member operators
+FWave1D<T,TimeType> FWave1D<T,TimeType>::operator + (const FWave1D<T,TimeType>& A) const
+FWave1D<T,TimeType> FWave1D<T,TimeType>::operator - (const FWave1D<T,TimeType>& A) const
+FWave1D<T,TimeType> FWave1D<T,TimeType>::operator * (const FWave1D<T,TimeType>& A) const
+FWave1D<T,TimeType> FWave1D<T,TimeType>::operator / (const FWave1D<T,TimeType>& A) const
+FWave1D<T,TimeType>& FWave1D<T,TimeType>::operator += (const FWave1D<T,TimeType>& A)
+FWave1D<T,TimeType>& FWave1D<T,TimeType>::operator -= (const FWave1D<T,TimeType>& A)
+FWave1D<T,TimeType>& FWave1D<T,TimeType>::operator *= (const FWave1D<T,TimeType>& A)
+FWave1D<T,TimeType>& FWave1D<T,TimeType>::operator /= (const FWave1D<T,TimeType>& A)
+FWave1D<T,TimeType>& FWave1D<T,TimeType>::operator = (const FWave1D<T,TimeType>& A)
+FWave1D<T,TimeType> FWave1D<T,TimeType>::operator = (const TWave1D<T,TimeType>& y)
+// non-class member operators
+FWave1D<T,TimeType> operator + (const FWave1D<T,TimeType> A, const T &y)
+FWave1D<T,TimeType> operator + (const T &y,const FWave1D<T,TimeType> A)
+FWave1D<T,TimeType> operator - (const FWave1D<T,TimeType> A, const T &y)
+FWave1D<T,TimeType> operator - (const T &y,const FWave1D<T,TimeType> A)
+FWave1D<T,TimeType> operator * (const FWave1D<T,TimeType> A, const T &y)
+FWave1D<T,TimeType> operator * (const T &y,const FWave1D<T,TimeType> A)
+FWave1D<T,TimeType> operator / (const FWave1D<T,TimeType> A, const T &y)
+FWave1D<T,TimeType> operator / (const T &y,const FWave1D<T,TimeType> A)
+    // the assigment operator.
+    TWave1D<T,TimeType> operator + (const TWave1D<T,TimeType>& A) const;
+    TWave1D<T,TimeType> operator - (const TWave1D<T,TimeType>& A) const;
+    TWave1D<T,TimeType> operator * (const TWave1D<T,TimeType>& A) const;
+    TWave1D<T,TimeType> operator / (const TWave1D<T,TimeType>& A) const;
+    TWave1D<T,TimeType>& operator += (const TWave1D<T,TimeType>& A);
+    TWave1D<T,TimeType>& operator -= (const TWave1D<T,TimeType>& A);
+    TWave1D<T,TimeType>& operator *= (const TWave1D<T,TimeType>& A);
+    TWave1D<T,TimeType>& operator /= (const TWave1D<T,TimeType>& A);
+    inline TWave1D<T,TimeType>& operator = (const TWave1D<T,TimeType>& A);
+    TWave1D<T,TimeType>& operator = (const FWave1D<T,TimeType>& f);
+TWave1D<T,TimeType> TWave1D<T,TimeType>::operator + (const TWave1D<T,TimeType>& A) const
+TWave1D<T,TimeType> TWave1D<T,TimeType>::operator - (const TWave1D<T,TimeType>& A) const
+TWave1D<T,TimeType> TWave1D<T,TimeType>::operator * (const TWave1D<T,TimeType>& A) const
+TWave1D<T,TimeType> TWave1D<T,TimeType>::operator / (const TWave1D<T,TimeType>& A) const
+TWave1D<T,TimeType>& TWave1D<T,TimeType>::operator += (const TWave1D<T,TimeType>& A)
+TWave1D<T,TimeType>& TWave1D<T,TimeType>::operator -= (const TWave1D<T,TimeType>& A)
+TWave1D<T,TimeType>& TWave1D<T,TimeType>::operator *= (const TWave1D<T,TimeType>& A)
+TWave1D<T,TimeType>& TWave1D<T,TimeType>::operator /= (const TWave1D<T,TimeType>& A)
+TWave1D<T,TimeType>& TWave1D<T,TimeType>::operator = (const TWave1D<T,TimeType>& A)
+TWave1D<T,TimeType>& TWave1D<T,TimeType>::operator = (const FWave1D<T,TimeType>& f)
+// non-class member operators
+TWave1D<T,TimeType> operator + (const TWave1D<T,TimeType> A, const T &y)
+TWave1D<T,TimeType> operator + (const T &y,const TWave1D<T,TimeType> A)
+TWave1D<T,TimeType> operator - (const TWave1D<T,TimeType> A, const T &y)
+TWave1D<T,TimeType> operator - (const T &y,const TWave1D<T,TimeType> A)
+TWave1D<T,TimeType> operator * (const TWave1D<T,TimeType> A, const T &y)
+TWave1D<T,TimeType> operator * (const T &y,const TWave1D<T,TimeType> A)
+TWave1D<T,TimeType> operator / (const TWave1D<T,TimeType> A, const T &y)
+TWave1D<T,TimeType> operator / (const T &y,const TWave1D<T,TimeType> A)
+    Wave1D<T,TimeType> operator + (const Wave1D<T,TimeType>& A) const;
+    Wave1D<T,TimeType> operator - (const Wave1D<T,TimeType>& A) const;
+    Wave1D<T,TimeType> operator * (const Wave1D<T,TimeType>& A) const;
+    Wave1D<T,TimeType> operator / (const Wave1D<T,TimeType>& A) const;
+    Wave1D<T,TimeType>& operator += (const Wave1D<T,TimeType>& A);
+    Wave1D<T,TimeType>& operator -= (const Wave1D<T,TimeType>& A);
+    Wave1D<T,TimeType>& operator *= (const Wave1D<T,TimeType>& A);
+    Wave1D<T,TimeType>& operator /= (const Wave1D<T,TimeType>& A);
+TWave1D<T,TimeType> TWave1D<T,TimeType>::operator + (const TWave1D<T,TimeType>& A) const
+TWave1D<T,TimeType> TWave1D<T,TimeType>::operator - (const TWave1D<T,TimeType>& A) const
+TWave1D<T,TimeType> TWave1D<T,TimeType>::operator * (const TWave1D<T,TimeType>& A) const
+TWave1D<T,TimeType> TWave1D<T,TimeType>::operator / (const TWave1D<T,TimeType>& A) const
+TWave1D<T,TimeType>& TWave1D<T,TimeType>::operator += (const TWave1D<T,TimeType>& A)
+TWave1D<T,TimeType>& TWave1D<T,TimeType>::operator -= (const TWave1D<T,TimeType>& A)
+TWave1D<T,TimeType>& TWave1D<T,TimeType>::operator *= (const TWave1D<T,TimeType>& A)
+TWave1D<T,TimeType>& TWave1D<T,TimeType>::operator /= (const TWave1D<T,TimeType>& A)
+// extraction >> operator on a dereferenced pointer. Write your own
+        // Note that operator[] is used to get a column. We are a stream
+        Array1D<T> operator[](unsigned c) { return getDataColumn(c); }
+    length -= start;            // complains about an operator-() type conversion
+    length -= start;            // complains about an operator-() type conversion

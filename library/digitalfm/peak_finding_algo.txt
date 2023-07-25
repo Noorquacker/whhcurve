@@ -1,0 +1,39 @@
+Peak finding:
+
+1.  Start with initial number of points, look for parabola peak.
+
+2.  If no peak, move forward half the width of points (round down) and try again.
+
+3.  When peak is found, move window so that peak is in middle of window. (Protect
+    against periodic situation here.)
+
+5.  Record peak.
+
+6.  Repeat from (2), beginning a full window forward of the previous peak.
+
+7.  Using previous two peaks, predict jump to next peak; place window.
+
+8.  Given predicted window, calculate peak.
+
+9.  If peak is not in middle of window, move window so that peak is in middle of
+    window. (Protect against periodic situation here.)
+
+10. Record peak in list.
+
+11. Repeat from (7) until end of data array.
+
+Classes:
+Use TWave1D as data array that keeps track of time.
+PeakFinder: initialized to a specific size and other peak finding params,
+            looks for a peak nearest a given estimated time and frequency
+PeakDataSLL:    T time, T amplitude, bool up/down, PeakData* next
+                quick/dirty way to accumulate all our peaks in memory
+                (or should we use an STL template for this?)
+
+PeakFinderExpandable: same as PeakFinder, but will spawn larger copy
+of itself if asked to process more data than capable.
+
+Frequency finding:
+
+Average 1/(delta t) for every n peaks. Size of frequency array is size
+of peak array /n.                
